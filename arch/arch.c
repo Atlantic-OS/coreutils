@@ -67,8 +67,11 @@ main(int argc, char *argv[])
 	}
 	if (optind != argc)
 		usage();
-
+#if defined(__atlantic__)
+	printf("%s%s\n", short_form ? "" : "AtlanticOS.", arch);
+#else
 	printf("%s%s\n", short_form ? "" : "OpenBSD.", arch);
+#endif
 	return (0);
 }
 
