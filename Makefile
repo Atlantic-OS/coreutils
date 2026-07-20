@@ -1,3 +1,3 @@
-SUBDIR=	uname
+SUBDIR=	arch uname
 
 .include <bsd.subdir.mk>
